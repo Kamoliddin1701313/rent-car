@@ -1,0 +1,165 @@
+@import "./params/mix";
+@import "./header.less";
+@import "./slider-header.less";
+@import "./main.less";
+
+body {
+  font-family: "Inter", sans-serif;
+  // overflow-y: hidden;
+  height: 10000px;
+}
+
+button.bgDark {
+  padding: 23px 112px;
+  color: white;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 44px;
+  border: none;
+  background: rgb(21, 21, 21);
+}
+
+img,
+video,
+svg {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.preLoader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1111;
+  flex-direction: column;
+  transition: 0.5s;
+
+  h2 {
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 20px;
+    .sm(font-size, 20px);
+  }
+}
+
+.preLoader-active {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.activeNav {
+  background: black;
+  transition: 0.5s;
+  box-shadow: 2px 2px 2px black;
+}
+
+.activeNav .activeLink {
+  color: white;
+}
+
+.modalRegister {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  z-index: 111;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .close {
+    color: white;
+    font-size: 50px;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    cursor: pointer;
+  }
+
+  .modal-register-body {
+    text-align: center;
+
+    h2.title {
+      font-size: 50px;
+      line-height: 50px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    form {
+      width: 500px;
+
+      input {
+        width: 100%;
+        padding: 20px 30px;
+        border: 2px solid gray;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: 500;
+        color: white;
+        background-color: transparent;
+        margin-bottom: 30px;
+      }
+
+      button {
+        width: 100%;
+        padding: 20px 30px;
+        border: none;
+        background-color: crimson;
+        color: white;
+        font-size: 14px;
+        font-weight: 500;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+.activeModal {
+  display: flex;
+}
+
+h2.title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 58px;
+  color: rgba(21, 21, 21, 1);
+  text-align: center;
+  margin-bottom: 50px;
+
+  .sm-block({
+        font-size: 30px;
+    });
+
+  .md-block({
+    font-size: 35px;
+});
+}
+p.error {
+  width: 100%;
+  padding: 10px 20px;
+  display: none;
+  gap: 20px;
+  color: white;
+  background-color: crimson;
+  margin-top: -10px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  text-align: center;
+  justify-content: center;
+}

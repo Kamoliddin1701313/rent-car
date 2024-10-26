@@ -1,0 +1,125 @@
+header {
+    width: 100%;
+    position: relative;
+
+    nav {
+        width: 100%;
+        padding: 20px 0px;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: 11;
+
+        a.logo {
+            font-size: 26px;
+            font-weight: 700;
+            color: white;
+            cursor: pointer;
+
+            span {
+                color: crimson;
+            }
+        }
+
+        .bars {
+            display: none;
+            cursor: pointer;
+
+            .sm-block({
+                display: flex;
+                gap:10px;
+                align-items: center;
+            });
+
+        .iconDark-menu-sm {
+            border: none;
+            cursor: pointer;
+            color: white
+        }
+
+        button {
+            background-color: transparent;
+            border: none;
+            font-size: 18px;
+            border: 2px solid white;
+            padding: 5px 10px;
+            border-radius: 6px;
+            display: block;
+            cursor: pointer;
+            color: white
+        }
+    }
+
+    .navbar-menu {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+
+        .sm-block({
+            display: none;
+            margin-top: 20px;
+
+        });
+
+    .iconDark-menu {
+        .sm(display, none);
+        cursor: pointer;
+        color: white
+    }
+
+    li {
+        .sm(width, 100%);
+        .sm(margin-bottom, 10px);
+
+        a {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 24px;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: .5s;
+
+            .sm-block({
+                display: block;
+                border-bottom: 2px solid white;
+                padding-bottom: 5px;
+                width: 100%;
+            });
+
+        &:hover {
+            color: crimson;
+        }
+    }
+}
+}
+}
+
+.header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    h1 {
+        font-size: 50px;
+        line-height: 50px;
+        color: white;
+        margin-bottom: 20px;
+        font-weight: 900;
+        span.textCrimson {
+            color: crimson;
+        }
+    }
+
+    button.bgDark {
+        padding: 10px 30px;
+        font-size: 20px;
+        border-radius: 10px;
+        background-color: crimson;
+        cursor: pointer;
+    }
+}
+}
